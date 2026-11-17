@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "version": "v1.1.2",
+  "generatedAt": "2026-11-06T07:11:09.1056898Z",
+  "firmware": [
+    {
+      "id": "c3_decoder_minimal",
+      "name": "Decoder USB",
+      "type": "decoder",
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        {
+          "address": "0x0",
+          "asset": "c3_decoder_minimal-bootloader.bin"
+        },
+        {
+          "address": "0x8000",
+          "asset": "c3_decoder_minimal-partitions.bin"
+        },
+        {
+          "address": "0xe000",
+          "asset": "c3_decoder_minimal-boot_app0.bin"
+        },
+        {
+          "address": "0x10000",
+          "asset": "c3_decoder_minimal-firmware.bin"
+        }
+      ]
+    },
+    {
+      "id": "c3_decoder_oled",
+      "name": "Decoder USB + OLED",
+      "type": "decoder",
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        {
+          "address": "0x0",
+          "asset": "c3_decoder_oled-bootloader.bin"
+        },
+        {
+          "address": "0x8000",
+          "asset": "c3_decoder_oled-partitions.bin"
+        },
+        {
+          "address": "0xe000",
+          "asset": "c3_decoder_oled-boot_app0.bin"
+        },
+        {
+          "address": "0x10000",
+          "asset": "c3_decoder_oled-firmware.bin"
+        }
+      ]
+    },
+    {
+      "id": "c3_decoder_lengkap",
+      "name": "Decoder USB + OLED + W5500",
+      "type": "decoder",
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        {
+          "address": "0x0",
+          "asset": "c3_decoder_lengkap-bootloader.bin"
+        },
+        {
+          "address": "0x8000",
+          "asset": "c3_decoder_lengkap-partitions.bin"
+        },
+        {
+          "address": "0xe000",
+          "asset": "c3_decoder_lengkap-boot_app0.bin"
+        },
+        {
+          "address": "0x10000",
+          "asset": "c3_decoder_lengkap-firmware.bin"
+        }
+      ]
+    }
+  ]
+}

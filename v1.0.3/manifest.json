@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "version": "v1.0.3",
+  "generatedAt": "2026-11-06T04:59:07.9791084Z",
+  "firmware": [
+    {
+      "id": "c3_transponder",
+      "name": "IDLap Transponder",
+      "type": "transponder",
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        {
+          "address": "0x0",
+          "asset": "c3_transponder-bootloader.bin"
+        },
+        {
+          "address": "0x8000",
+          "asset": "c3_transponder-partitions.bin"
+        },
+        {
+          "address": "0xe000",
+          "asset": "c3_transponder-boot_app0.bin"
+        },
+        {
+          "address": "0x10000",
+          "asset": "c3_transponder-firmware.bin"
+        }
+      ]
+    }
+  ]
+}

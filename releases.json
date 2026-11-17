@@ -1,0 +1,146 @@
+[
+  {
+    "id": 436203355,
+    "tag_name": "v1.1.2",
+    "name": "v1.1.2 - OLED Race Display",
+    "published_at": "2026-11-06T07:11:14Z",
+    "body": "OLED race display untuk SSD1306 I2C 0,96 inci 128x64.\n\nTiga varian: **Decoder USB**, **Decoder USB + OLED**, **Decoder USB + OLED + W5500**.\n\n- Header idLap Decoder + versi firmware, ID besar dan rata tengah. ID terakhir tetap tampil sampai deteksi baru.\n- Deteksi valid yang lolos deduplikasi memicu invert 500 ms: angka hitam pada latar putih, kemudian kembali putih pada latar hitam. Tidak ada delay 500 ms di loop deteksi.\n- DT menampilkan selang waktu antara dua deteksi valid terakhir berdasarkan timestamp radio, bukan waktu render dan bukan lap per mobil.\n- RSSI dBm dan indikator lima bar dicocokkan ke paket yang diterima. Metadata yang tidak cocok ditampilkan --.\n- Varian W5500 menampilkan IP/DHCP, WS:81, Z:5000, P:99999 (WebSocket port 81, ZRound port 5000, PIN 99999).\n- OLED menggunakan worker terpisah, I2C400kHz dan satu snapshot terbaru. Saat event berdekatan layar dapat melewati ID perantara; event timing tetap diproses. Transisi fisik mengikuti cadence worker50ms + transfer I2C.\n\nPin umum: IR GPIO0, LED gate GPIO1, buzzer aktif GPIO3, LED biru onboard GPIO8. OLED SDA20/SCL21, alamat0x3C/0x3D. W5500 SCK4/MISO5/MOSI6/CS7/RESET10. LED biru dan gate500ms, buzzer80ms.\n\nValidasi:39 tes native,4 tes packaging, build tiga varian lokal dan GitHub Actions lulus. Checksum12 bagian flash diverifikasi. Hardware fisik, jangkauan RF/IR, RSSI dan kualitas OLED belum diuji pada perangkat nyata. Rilis transponderv1.0.3 tetap tersedia.\n",
+    "html_url": "https://github.com/LuminixDevs/idlap-firmware/tree/main/v1.1.2",
+    "prerelease": false,
+    "draft": false,
+    "assets": [
+      {
+        "name": "SHA256SUMS",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/SHA256SUMS",
+        "size": 1179
+      },
+      {
+        "name": "c3_decoder_lengkap-boot_app0.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_lengkap-boot_app0.bin",
+        "size": 8192
+      },
+      {
+        "name": "c3_decoder_lengkap-bootloader.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_lengkap-bootloader.bin",
+        "size": 13248
+      },
+      {
+        "name": "c3_decoder_lengkap-firmware.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_lengkap-firmware.bin",
+        "size": 809680
+      },
+      {
+        "name": "c3_decoder_lengkap-partitions.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_lengkap-partitions.bin",
+        "size": 3072
+      },
+      {
+        "name": "c3_decoder_lengkap.zip",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_lengkap.zip",
+        "size": 507752
+      },
+      {
+        "name": "c3_decoder_minimal-boot_app0.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_minimal-boot_app0.bin",
+        "size": 8192
+      },
+      {
+        "name": "c3_decoder_minimal-bootloader.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_minimal-bootloader.bin",
+        "size": 13248
+      },
+      {
+        "name": "c3_decoder_minimal-firmware.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_minimal-firmware.bin",
+        "size": 725712
+      },
+      {
+        "name": "c3_decoder_minimal-partitions.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_minimal-partitions.bin",
+        "size": 3072
+      },
+      {
+        "name": "c3_decoder_minimal.zip",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_minimal.zip",
+        "size": 459308
+      },
+      {
+        "name": "c3_decoder_oled-boot_app0.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_oled-boot_app0.bin",
+        "size": 8192
+      },
+      {
+        "name": "c3_decoder_oled-bootloader.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_oled-bootloader.bin",
+        "size": 13248
+      },
+      {
+        "name": "c3_decoder_oled-firmware.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_oled-firmware.bin",
+        "size": 767968
+      },
+      {
+        "name": "c3_decoder_oled-partitions.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_oled-partitions.bin",
+        "size": 3072
+      },
+      {
+        "name": "c3_decoder_oled.zip",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/c3_decoder_oled.zip",
+        "size": 483354
+      },
+      {
+        "name": "manifest.json",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.1.2/manifest.json",
+        "size": 1864
+      }
+    ]
+  },
+  {
+    "id": 436114801,
+    "tag_name": "v1.0.3",
+    "name": "v1.0.3 - Transponder GPIO Powering",
+    "published_at": "2026-11-06T04:58:13Z",
+    "body": "Firmware transponder ESP32-C3 SuperMini dengan GPIO powering receiver IR.\n\n| Receiver IR | ESP32-C3 | Mode setelah firmware berjalan |\n| --- | --- | --- |\n| OUT | GPIO1 | INPUT_PULLUP |\n| GND | GPIO2 | OUTPUT LOW, nominal ~0 V |\n| VCC | GPIO3 | OUTPUT HIGH, nominal ~3,3 V |\n\n- GPIO3 tidak lagi digunakan untuk buzzer. LED status onboard tetap di GPIO8.\n- Khusus receiver IR 3,3 V berarus kecil. GPIO2 adalah strapping pin saat reset; suplai GPIO aktif setelah firmware mulai berjalan.\n- USB native dan konfigurasi ID tetap tersedia. Jangan memakai firmware lama untuk wiring GPIO powering ini.\n- Rilis ini hanya memuat transponder; aset decoder dan rilis firmware lama dihapus sesuai pembaruan distribusi.\n\nInstaller web menggunakan `manifest.json` beserta empat berkas flash. `SHA256SUMS` memuat checksum berkas firmware.\n\nValidasi: 23 tes native firmware, 3 tes packaging/USB CDC, dan build ESP32-C3 transponder lulus. Tegangan dan boot dengan receiver terpasang belum diuji pada hardware nyata.\n\n\n**Full Changelog**: https://github.com/rcmodid/idLap/compare/v1.0.2...v1.0.3",
+    "html_url": "https://github.com/LuminixDevs/idlap-firmware/tree/main/v1.0.3",
+    "prerelease": false,
+    "draft": false,
+    "assets": [
+      {
+        "name": "SHA256SUMS",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.0.3/SHA256SUMS",
+        "size": 381
+      },
+      {
+        "name": "c3_transponder-boot_app0.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.0.3/c3_transponder-boot_app0.bin",
+        "size": 8192
+      },
+      {
+        "name": "c3_transponder-bootloader.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.0.3/c3_transponder-bootloader.bin",
+        "size": 13248
+      },
+      {
+        "name": "c3_transponder-firmware.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.0.3/c3_transponder-firmware.bin",
+        "size": 733312
+      },
+      {
+        "name": "c3_transponder-partitions.bin",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.0.3/c3_transponder-partitions.bin",
+        "size": 3072
+      },
+      {
+        "name": "c3_transponder.zip",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.0.3/c3_transponder.zip",
+        "size": 462809
+      },
+      {
+        "name": "manifest.json",
+        "browser_download_url": "https://raw.githubusercontent.com/LuminixDevs/idlap-firmware/main/v1.0.3/manifest.json",
+        "size": 687
+      }
+    ]
+  }
+]
